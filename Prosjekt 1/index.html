@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" type="text/css" href="page.css" />
+    <meta charset="utf-8">
+    <title>Baplo von Bicasso</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script src="page.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box intro">Baplo von Bicasso
+            <p>Denne utrolige siden vil gi deg et innblikk i mitt ekstraordinære liv. Det vil uten tvil være vanskelig å forstå mange av konseptene som presenteres på denne siden. Mitt navn er Von Bicasso og jeg har drevet med abstrakt neo-funk kunst siden tidlig 90-tallet. Dette er min verden.
+                <br/><br/>Dersom du vil forsøke deg inn i min verden, flytt musepekeren over kunstverket under og trykk på venstre museknapp. På denne måten kan du ta del i kunstverket. Du kan trykke så mange ganger du vil. For å starte på nytt tar du musepekeren ut av lerretet.
+            </p>
+        </div>
+
+        <div class="box b">Meny<br/>
+            <span><a href="#">Om meg</a><br/></span>
+            <span><a href="#">Min historie</a><br/></span>
+            <span><a href="#">Mine verk</a><br/></span>
+            <span><a href="#">Kontakt meg</a><br/></span>
+        </div>
+        <div class="box c"><canvas id="canvas" width="500" height="400"></canvas>
+        <br/><span>"Virkelighetens Symbiotiske paradigme"<br/>2018</span>
+        </div>
+
+        <div class="box d">Trykk for dokumentasjon
+            <div class="doc">
+                <p><b>CSS Grid / Flexbox:</b>
+                    <br/>CSS Grid og Flexbox er to nye teknologier som kan brukes til å lage nettsider uten å benytte seg av float og lignende som har vært normen tidligere.
+                    Float og annen gammel CSS teknologi er i utgangspunktet ikke laget for å brukes til styling av nettsider slik vi lager de i dag. De er i utgangspunktet laget for tekstformatering, og måten vi har brukt det på de siste tiårene er en slags "hack".<br/>
+                    For å løse dette har CSS Grid og Flexbox blitt introdusert. Begge disse lar deg style flere elementer samtidig, og sørge for at det er fin og jevn avstand/størrelse på de forskjellige elementene. Forskjellen mellom Grid og Flexbox er at Flexbox i utgangpsunktet kun er laget for å style i kun én dimensjon, mens Grid lar deg ta full kontroll, både horisontalt og vertikalt.
+                    Jeg har valgt å bruke CSS Grid ettersom jeg visste at jeg kom til å designe i begge retninger, og ettersom dette er en nyere teknologi som var relativt enkel å sette seg inn i.
+                </p>
+                <p>
+                    <b>HTML5 Canvas / SVG:</b><br/>
+                    I mitt prosjekt har jeg valgt å bruke Canvas. Prosjektets kravspesifikasjon krever derimot at man har individuell oppførsel for forskjellige figurer på lerretet, noe som er vanskelig å gjøre med canvas. I min løsning (HTML5 canvas) tegnes det et bitmap-bilde, noe som betyr at hele bildet må tegnes på nytt dersom noe i bildet skal endres / animeres.
+                    <br/>Dette kunne vært løst på en enklere måte ved å bruke SVG, som er basert på XML og gjør at hvert enkelt objekt man tegner ligger tilgjengelig i DOM, slik at man kan gjøre forskjellige handlinger på hvert enkelt objekt f.eks. ved å gi de en unik ID og bruke javascript for å animere/manipulere. Jeg har klart å få til forskjellig oppførsel for forskjellige objekter ved å tegne hele bildet på nytt i Canvas-et,
+                    men skulle jeg gått tilbake og gjort alt på nytt ville jeg nok valgt å bruke SVG.
+                </p>
+                <p>
+                    <b>jQuery:</b><br/>
+                    jQuery er et bibliotek for JavaScript, som gjør en del handlinger enklere. For eksempel i dette prosjektet har jeg benyttet bilioteket for å enkelt finne frem til forskjellige elementer, uten å måtte søke meg gjennom DOM-en med mange for-løkker ol. Generelt sett trenger man skrive mindre kode for å få til mer ved å bruke dette biblioteket. jQuery lar meg i tillegg enkelt legge Event Handlers på forskjellige objekter, noe jeg har brukt til å gi funksjonalitet til Canvas-et, i tillegg til å lage "knappen" som skjuler denne dokumentasjonen.
+                </p>
+                <p>
+                    <b>Testing:</b><br/>
+                    Cross-browser testing er helt essentielt innenfor webutvikling ettersom forskjellige nettlesere håndterer og implementerer forskjellige teknologier på forskjellig måte. Riktignok har situasjonen blitt bedre de siste årene, før var det veldig lite standardisering, men nå for tiden vil heldigvis de fleste nettlesere vise det meste innholdet på lik måte. Det er likevel forskjeller, og for å gjøre nettsiden tilgjengelig for flest mulig er det derfor
+                    fortsatt et veldig stort behov for å teste i forskjellige nettlesere. Et eksempel jeg kom over i min testing av nettsiden var at ÆØÅ var feil formatert i Edge, mens chrome og HTML preview funksjonen i Atom viste de riktig formatert. Dette løste jeg ved å legge inn en meta-tag med UTF-8 som formatering.
+                    I tillegg oppdaget jeg rett før innlevering at tydeligvis hverken Chrome eller Edge aksepterte løsningen min for å åpne/lukke dokumentasjon ved hjelp av max-height. Jeg måtte derfor benytte en fast pixel-høyde på dokumentasjonen. Dette problemet oppstod ettersom jeg ville ha animasjon/transition på åpning/lukkingen av dokumentasjonen.
+                </p>
+                <p>
+                    <b>Kilder:</b>
+                    <br/>https://www.youtube.com/watch?v=paMmgo4MhQ8
+                    <br/>https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors
+                    <br/>https://www.w3schools.com/html/html5_canvas.asp
+                    <br/>https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
+                    <br/>https://www.w3schools.com/css/css_grid.asp
+                    <br/>https://www.w3schools.com/html/html5_svg.asp
+                    <br/>https://gridbyexample.com/examples/
+                </p>
+
+            </div>
+        </div>
+</div>
+</body>
+</html>

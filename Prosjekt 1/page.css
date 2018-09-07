@@ -1,0 +1,108 @@
+html, body {
+   margin:10px;
+   padding:0;
+   height:100%;
+
+}
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("BebasNeue.otf");
+}
+
+a {
+    text-decoration: underline;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+        grid-template-columns: 2fr 0fr 0.5fr;
+        background-color: #fff;
+        color: #444;
+        font-family: Bebas Neue, Verdana;
+    width: 100%;
+    min-width: 540px;
+    margin-bottom: 20px;
+    }
+
+    .box {
+        background-color: #ccc;
+        color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 150%;
+    }
+
+    .intro {
+        background: linear-gradient(to bottom right,  rgba(66, 244, 241, 0.8), rgba(76, 217, 100, 0.6));
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+    .intro p {
+        font-size: 13px;
+        color: #444444;
+        /*margin-left: 5px;*/
+        /*font-family: Georgia;*/
+        padding: 10px;
+        background-color: rgba(255,255,255,0.5);
+    }
+    .b {
+        background-color: rgb(71, 71, 71);
+        grid-column: 3 ;
+        grid-row: 1 / 3;
+        line-height: 35px;
+        min-width: 90px;
+    }
+    .c {
+        grid-column: 1 /3 ;
+        grid-row: 2 ;
+        text-align: center;
+        overflow:hidden;
+        min-width: 500px;
+    }
+    .c span {
+        line-height: 40px;
+    }
+    .d {
+        grid-column: 1/4;
+        grid-row: 3;
+        background: linear-gradient(to bottom right,  rgba(255, 76, 165, 0.7), rgba(0, 54, 162, 0.7));
+        font-size: 15px;
+        cursor:pointer;
+        text-align: center;
+        transition: 1s;
+    }
+
+    .doc {
+        font-size: 13px;
+        color: #444444;
+        /*margin-left: 5px;*/
+        font-family: Arial;
+        background-color: rgba(255,255,255,0.5);
+        overflow: hidden;
+        height:0px;
+        /*display: none;*/
+        margin-top:0px;
+        text-align:left;
+        cursor: text;
+        padding-left: 12px;
+        padding-right: 12px;
+        transition: height 1s;
+    }
+    .b span {
+        font-size: 15px;
+        color: #ccc;
+        margin-left: 5px;
+    }
+
+    #canvas {
+        border: 2px solid gray;
+        background-color: white;
+        cursor: pointer;
+    }
